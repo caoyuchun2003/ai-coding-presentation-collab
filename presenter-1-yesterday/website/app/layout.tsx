@@ -6,8 +6,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI 编程观察站｜Coding Agent 不是排名，而是分工",
-  description: "关于 Cursor、Codex、OpenCode、DeepSeek Harness 与 Pi 的 Coding Agent 研究笔记。",
+  title: "AI 项目分享｜Coding Agent 与项目文档入口",
+  description: "两部分 Web 分享：Coding Agent 选型观察，以及 AI 接手真实项目时的文档入口方法。",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
