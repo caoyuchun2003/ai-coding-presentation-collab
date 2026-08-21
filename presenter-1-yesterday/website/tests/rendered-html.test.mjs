@@ -26,6 +26,7 @@ test("keeps both presentation sections and responsive styles", async () => {
   assert.match(page, /Agent Runtime/);
   assert.match(page, /Memory/);
   assert.match(page, /GPT Site/);
+  assert.match(page, /https:\/\/ai-coding-agent-observation\.caoyuchun2003\.chatgpt\.site/);
   assert.match(page, /Remote Control/);
   assert.match(page, /图片设计/);
   assert.match(page, /OFFICIAL USE CASES/);

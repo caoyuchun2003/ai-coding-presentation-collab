@@ -99,6 +99,8 @@
   .content-list > div { grid-template-columns: 80px 300px 1fr; }
   .content-code-impact { grid-template-columns: repeat(5, 140px); overflow-x: auto; }
 }
+.route-link { display: inline-block; margin-top: 22px; padding: 10px 14px; border: 1px solid var(--navy); color: var(--navy); font: 10px var(--font-geist-mono), monospace; }
+.route-link:hover { background: var(--navy); color: var(--white); }
 @media (max-width: 520px) {
   .intro .unified-heading { margin-top: 5vh; }
   .usecases .unified-heading { margin-top: 4vh; }
