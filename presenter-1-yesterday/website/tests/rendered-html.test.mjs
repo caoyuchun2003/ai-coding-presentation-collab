@@ -22,7 +22,7 @@ test("keeps both presentation sections and responsive styles", async () => {
   assert.match(page, /const agentSlides/);
   assert.match(page, /AGENT ARCHITECTURE/);
   assert.match(page, /GPT Site/);
-  assert.match(page, /定任务/);
+  assert.match(page, /Remote Control/);
   assert.match(page, /图片设计/);
   assert.match(page, /const docsSlides/);
   assert.match(page, /AGENTS\.md/);
