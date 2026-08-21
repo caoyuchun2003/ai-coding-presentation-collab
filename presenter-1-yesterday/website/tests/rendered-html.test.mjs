@@ -28,6 +28,8 @@ test("keeps both presentation sections and responsive styles", async () => {
   assert.match(page, /GPT Site/);
   assert.match(page, /Remote Control/);
   assert.match(page, /图片设计/);
+  assert.match(page, /OFFICIAL USE CASES/);
+  assert.match(page, /https:\/\/learn\.chatgpt\.com\/use-cases/);
   assert.match(page, /DEEPSEEK HARNESS/);
   assert.match(page, /EVERYTHING IS A PLUGIN/);
   assert.match(page, /const docsSlides/);
