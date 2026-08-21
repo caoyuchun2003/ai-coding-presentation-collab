@@ -18,7 +18,7 @@ test("server-renders the unified AI project sharing site", async () => {
   assert.doesNotMatch(html, /Your site is taking shape|react-loading-skeleton|codex-preview/);
 });
 test("keeps both presentation sections and responsive styles", async () => {
-  const [page, css] = await Promise.all([readFile(new URL("../app/page.tsx", import.meta.url), "utf8"), readFile(new URL("../app/globals.css", import.meta.url), "utf8")]);
+  const [page, docs, css] = await Promise.all([readFile(new URL("../app/page.tsx", import.meta.url), "utf8"), readFile(new URL("../app/document-slides.ts", import.meta.url), "utf8"), readFile(new URL("../app/globals.css", import.meta.url), "utf8")]);
   assert.match(page, /const agentSlides/);
   assert.match(page, /AGENT ARCHITECTURE/);
   assert.match(page, /Agent Runtime/);
@@ -29,6 +29,10 @@ test("keeps both presentation sections and responsive styles", async () => {
   assert.match(page, /DEEPSEEK HARNESS/);
   assert.match(page, /EVERYTHING IS A PLUGIN/);
   assert.match(page, /const docsSlides/);
+  assert.match(docs, /export const documentSlides/);
+  assert.match(docs, /18 \/ QUICK REFERENCE/);
+  assert.match(docs, /AGENTS\.MD CONTENT/);
+  assert.equal((docs.match(/^    kicker:/gm) || []).length, 19);
   assert.match(page, /AGENTS\.md/);
   assert.match(page, /switchSection/);
   assert.match(css, /\.section-nav/);
