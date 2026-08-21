@@ -46,13 +46,13 @@
 .content-code-impact > div:not(:first-child) { padding-left: 14px; }
 .content-code-impact > div:last-child { border: 0; }
 .content-code-impact span { display: block; margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.4; }
-.code .unified-heading { margin-top: 3vh; }
-.code .unified-heading h1 { max-width: 900px; font-size: clamp(44px, 5.8vw, 78px); }
-.code .unified-heading p { max-width: 640px; margin-top: 18px; font-size: 13px; }
-.code .content-code { margin-top: 3vh; }
-.code .content-code article { min-height: 220px; }
-.code .content-code.single article { max-height: 27vh; }
-.code .content-code pre { max-height: 21vh; overflow: auto; }
+.code .unified-heading { margin-top: 2vh; }
+.code .unified-heading h1 { max-width: 900px; font-size: clamp(42px, 5.2vw, 68px); }
+.code .unified-heading p { max-width: 640px; margin-top: 14px; font-size: 12px; }
+.code .content-code { margin-top: 2vh; }
+.code .content-code article { min-height: 0; padding: 14px 18px; }
+.code .content-code.single article { max-height: none; overflow: visible; }
+.code .content-code pre { max-height: none; overflow: visible; padding: 12px; font-size: 10px; line-height: 1.45; }
 .code .content-code-impact { margin-top: 12px; }
 .list .unified-heading { margin-top: 4vh; }
 .list .unified-heading h1 { font-size: clamp(44px, 5.8vw, 78px); }
