@@ -18,6 +18,15 @@
 .matrix .content-matrix span { font-size: 10px; }
 @media (max-width: 520px) { .matrix .unified-heading h1 { max-width: 100%; font-size: 48px; } }
 .content-cards.three { grid-template-columns: repeat(3, 1fr); }
+.intro { background: var(--white); }
+.content-intro { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 8vh; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.content-intro article { min-height: 165px; padding: 18px 18px 18px 0; border-right: 1px solid var(--line); }
+.content-intro article:not(:first-child) { padding-left: 18px; }
+.content-intro article:last-child { border: 0; }
+.intro-event { display: inline-block; margin-top: 28px; padding: 14px 20px; border: 3px solid var(--orange); background: #fff1cf; color: var(--navy); font: 700 16px var(--font-geist-mono), monospace; letter-spacing: .02em; }
+.content-intro span { display: block; color: var(--orange); font: 9px var(--font-geist-mono), monospace; }
+.content-intro strong { display: block; margin-top: 28px; font-size: 16px; }
+.content-intro p { margin: 12px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
 .content-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 7vh; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .content-compare article { min-height: 250px; padding: 22px 28px 22px 0; }
 .content-compare article:last-child { padding-left: 28px; border-left: 1px solid var(--line); }
@@ -61,12 +70,22 @@
 .list .content-list > div { min-height: 42px; }
 @media (max-width: 850px) {
   .content-compare { grid-template-columns: repeat(2, 280px); overflow-x: auto; }
-  .content-cards.three, .content-facts, .content-facts.five { grid-template-columns: repeat(5, 190px); overflow-x: auto; padding-bottom: 5px; }
+  .content-intro, .content-cards.three, .content-facts, .content-facts.five { grid-template-columns: repeat(5, 190px); overflow-x: auto; padding-bottom: 5px; }
+  .intro .content-intro { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; overflow: visible; }
   .content-list { max-height: 52vh; }
   .content-list > div { grid-template-columns: 80px 300px 1fr; }
   .content-code-impact { grid-template-columns: repeat(5, 140px); overflow-x: auto; }
 }
 @media (max-width: 520px) {
+  .intro .unified-heading { margin-top: 5vh; }
+  .intro .content-intro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; width: 100%; margin-top: 5vh; overflow: visible; padding-bottom: 0; }
+  .intro-event { margin-top: 20px; padding: 11px 13px; font-size: 13px; }
+  .intro .content-intro article, .intro .content-intro article:not(:first-child) { min-width: 0; min-height: 0; padding: 12px 10px 12px 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
+  .intro .content-intro article:nth-child(even) { padding-left: 10px; padding-right: 0; border-right: 0; }
+  .intro .content-intro article:nth-last-child(-n + 2) { border-bottom: 0; }
+  .intro .content-intro strong { margin-top: 8px; }
+  .intro .content-intro strong { font-size: 14px; line-height: 1.25; overflow-wrap: anywhere; }
+  .intro .content-intro p { margin-top: 5px; font-size: 10px; line-height: 1.4; overflow-wrap: anywhere; }
   .content-compare { grid-template-columns: 1fr; }
   .content-compare article:last-child { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
   .content-list > div { display: block; padding: 12px 0; }

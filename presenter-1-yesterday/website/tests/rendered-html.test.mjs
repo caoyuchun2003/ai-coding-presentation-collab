@@ -11,15 +11,17 @@ test("server-renders the unified AI project sharing site", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>AI 项目分享｜我的 Coding Agent 工具栈与架构<\/title>/i);
+  assert.match(html, /<title>AI 编程实践分享｜从工具到落地<\/title>/i);
   assert.match(html, /我的 Agent 工具栈/);
-  assert.match(html, /项目文档入口/);
+  assert.match(html, /AI 接手真实项目/);
   assert.match(html, /Cursor/);
   assert.doesNotMatch(html, /Your site is taking shape|react-loading-skeleton|codex-preview/);
 });
 test("keeps both presentation sections and responsive styles", async () => {
   const [page, docs, css] = await Promise.all([readFile(new URL("../app/page.tsx", import.meta.url), "utf8"), readFile(new URL("../app/document-slides.ts", import.meta.url), "utf8"), readFile(new URL("../app/globals.css", import.meta.url), "utf8")]);
   assert.match(page, /const agentSlides/);
+  assert.match(page, /AI CODING \/ SHARING/);
+  assert.match(page, /分享介绍/);
   assert.match(page, /AGENT ARCHITECTURE/);
   assert.match(page, /Agent Runtime/);
   assert.match(page, /Memory/);
