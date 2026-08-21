@@ -21,6 +21,9 @@ test("keeps both presentation sections and responsive styles", async () => {
   const [page, css] = await Promise.all([readFile(new URL("../app/page.tsx", import.meta.url), "utf8"), readFile(new URL("../app/globals.css", import.meta.url), "utf8")]);
   assert.match(page, /const agentSlides/);
   assert.match(page, /AGENT ARCHITECTURE/);
+  assert.match(page, /GPT Site/);
+  assert.match(page, /定任务/);
+  assert.match(page, /图片设计/);
   assert.match(page, /const docsSlides/);
   assert.match(page, /AGENTS\.md/);
   assert.match(page, /switchSection/);
