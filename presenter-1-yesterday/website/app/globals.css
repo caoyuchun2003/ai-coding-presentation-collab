@@ -11,4 +11,9 @@
 .matrix .unified-heading h1 { max-width: 1000px; font-size: clamp(52px, 6.2vw, 88px); }
 .matrix .unified-heading { margin-top: 5vh; }
 .matrix .content-matrix { margin-top: 4vh; }
+.matrix .content-matrix > div { min-height: 48px; }
+.matrix .content-matrix .matrix-head { min-height: 32px; }
+.matrix .content-matrix b { padding: 5px 8px; font-size: 10px; }
+.matrix .content-matrix strong { font-size: 13px; }
+.matrix .content-matrix span { font-size: 10px; }
 @media (max-width: 520px) { .matrix .unified-heading h1 { max-width: 100%; font-size: 48px; } }
