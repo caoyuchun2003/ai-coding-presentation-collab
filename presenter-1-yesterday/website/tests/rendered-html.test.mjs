@@ -26,6 +26,8 @@ test("keeps both presentation sections and responsive styles", async () => {
   assert.match(page, /GPT Site/);
   assert.match(page, /Remote Control/);
   assert.match(page, /图片设计/);
+  assert.match(page, /DEEPSEEK HARNESS/);
+  assert.match(page, /EVERYTHING IS A PLUGIN/);
   assert.match(page, /const docsSlides/);
   assert.match(page, /AGENTS\.md/);
   assert.match(page, /switchSection/);
