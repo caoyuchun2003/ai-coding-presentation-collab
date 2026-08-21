@@ -112,7 +112,7 @@
   .route .content-route b { width: 26px; height: 26px; margin-bottom: 14px; }
   .route .content-route strong { margin-bottom: 7px; font-size: 14px; }
   .route .content-route small { margin-top: 6px; font-size: 10px; }
-  .route .route-link { margin-top: 12px; padding: 8px 12px; }
+  .route .route-link { position: absolute; left: 9vw; bottom: 18px; z-index: 1; margin-top: 0; padding: 8px 12px; }
 }
 @media (max-width: 520px) {
   .intro .unified-heading { margin-top: 5vh; }
